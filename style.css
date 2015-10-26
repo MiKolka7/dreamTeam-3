@@ -23,32 +23,35 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
+
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+
 body {
 	line-height: 1;
 }
+
 ol, ul {
 	list-style: none;
 }
+
 blockquote, q {
 	quotes: none;
 }
+
 blockquote:before, blockquote:after,
 q:before, q:after {
 	content: '';
 	content: none;
 }
+
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
-}
-
-body {
-	font-family: Raleway,Tahoma,sans-serif;
 }
 
 .clearfix:before,
@@ -61,47 +64,109 @@ body {
   clear: both;
 }
 
-header {
-	height: 1096px;
-	background: #7b7b7b url(img/bg-slider.png) no-repeat 100% 0%;
-}
-
-.wrap {
-  max-width: 1170px;
-  /*width: 100%;*/
-  margin: 0 auto;
-  /*padding-top: 80px;*/
-}
-
-.button {
-	display: inline-block;
-	cursor: pointer;
-	background-color: transparent;
-}
-
-.title {
-	text-align: center;
+h2 {
 	color: #303030;
-	font-family:'Playfair Display', serif;
-	font-size: 30px;
+	font-family: 'Playfair Display', serif;
+	font-size: 1.875em;
 	font-style: italic;
 	line-height: 24px;
-	margin-bottom: 32px;
+}
+
+p {
+	color: #515151;
+	font-family: 'Raleway',sans-serif;
+	font-size: 0.75em;
+	font-weight: 500;
+	line-height: 1.5em;
+}
+
+/* Header */
+
+header {
+	height: 0;
+	padding-bottom: 57.25%;
+	background: url(img/bg-slider.png) no-repeat 50% 50%;
+	background-size: cover;
+	position: relative;
 }
 
 .logo {
-	float: left;
-	margin: 59px 0 0 89px;
+	margin-top: 59px;
+	margin-left: 89px;
+	position: absolute;
+	top: 0;
+	left: 0;
 }
 
-.navmenu a {
+nav {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.main-navigation {
+	display: inline-block;
+}
+
+.control-nav {
+	width: 100%;
+	text-align: center;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	margin-bottom: 30px;
+}
+
+.control-nav li {
+	display: inline;
+	margin: 0 5px;
+}
+
+.control-nav li a {
+	display: inline-block;
+	width: 11px;
+	height: 11px;
+	border: 2px solid #fff;
+	background: #fff;
+	cursor: pointer;
+	border-radius: 10px;
+}
+
+.control-nav li a.active, .control-nav li a:hover {
+	border: 2px solid #fff;
+	background: transparent;
+}
+
+.main-navigation > li {
+	margin-right: 35px;
+	display: block;
+	float: left;
+
+	color: #000;
+	text-align: center;
+
+	cursor: pointer;
+}
+
+.main-navigation a {
+	font-family: Raleway;
+	font-size: 0.813em;
+	font-weight: 600;
+	text-transform: uppercase;
 	text-decoration: none;
+	line-height: 12.2rem;
 	color: white;
 	position: relative;
 }
 
-.navmenu a.active:before,
-.navmenu a:hover:before{
+ul.main-navigation:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.main-navigation a.active:before,
+.main-navigation li a:hover:before {
 	content: '';
 	position: absolute;
 	top: 50%;
@@ -112,58 +177,33 @@ header {
 	margin: -17px 0 0 -17px;
 }
 
-a.active {
-	background: url(img/line_active.png) no-repeat 50% 50%;
+.menu-icon {
+	display: none;
 }
 
-ul.navmenu {
-	margin: 0;
-	padding: 0;
-	font-size: 13px;
-	font-weight: 600;
-	line-height: 24px;
-	text-transform: uppercase;
-	list-style: none;
-}
-
-ul.navmenu:after{
-	content: "";
-  	clear: both;
-  	display: block;
-}
-
-ul.navmenu li {
-	cursor: pointer;
-  	list-style: none;
-  	display: block;
-  	position: relative;
-  	padding: 0;
-}
-
-ul.navmenu {
+.menu-icon {
+	margin-top: 91px;
+	padding-right: 35px;
 	float: right;
-	padding: 0 8px;
 }
 
-ul.navmenu li {
-	float: left;
+.search-icon {
+	margin-top: 91px;
+	padding-right: 57px;
+	float: right;
 }
 
-ul.navmenu li a {
-	line-height: 188px;
-	padding: 32px;
+.wrap {
+	max-width: 1170px;
+	/*width: 100%;*/
+	margin: 0 auto;
+	/*padding-top: 80px;*/
 }
 
-.navicon {
-    float: right;
-    margin: 86px 32px 0 0;
-    cursor: pointer;
-}
-
-.searchicon {
-    float: right;
-    margin: 86px 57px 0 0;
-    cursor: pointer;
+.button {
+	display: inline-block;
+	cursor: pointer;
+	background-color: transparent;
 }
 
 /*About Me*/
@@ -173,8 +213,7 @@ ul.navmenu li a {
 }
 
 .ava {
-	width: 170px;
-	height: 170px;
+	max-width: 100%;
 	margin-top: 89px;
 	margin-bottom: 57px;
 }
@@ -186,6 +225,8 @@ ul.navmenu li a {
 	position: relative;
 	border-radius: 100%;
 	margin: 0 auto;
+	margin-top: 32px;
+	margin-bottom: 32px
 }
 
 .line1 {
@@ -208,11 +249,6 @@ ul.navmenu li a {
 }
 
 .about-me p {
-	width: 946px;
-	color: #515151;
-	font-size: 12px;
-	font-weight: 500;
-	line-height: 24px;
 	margin: 32px auto;
 }
 
@@ -282,17 +318,17 @@ ul.navmenu li a {
 
 ul.social li {
 	cursor: pointer;
-  	list-style: none;
-  	display: block;
-  	position: relative;
-  	padding: 0;
+	list-style: none;
+	display: block;
+	position: relative;
+	padding: 0;
 
 }
 
 ul.social li {
 	display: inline-block;
 	vertical-align: top;
-	margin: 0 10px;
+	margin: 0 1%;
 
 }
 
@@ -301,6 +337,7 @@ ul.social li {
 .portfolio {
 	margin-top: 70px;
 	margin-bottom: 90px;
+	text-align: center;
 }
 
 .portfolio-items {
@@ -312,28 +349,28 @@ ul.social li {
 .portfolio-items li {
 	position: relative;
 	overflow: hidden;
-    cursor: pointer;
-    display: inline-block;
-    margin: 10px 8px;
+	cursor: pointer;
+	display: inline-block;
+	margin: 10px 8px;
 }
 
 .portfolio-detail {
 	position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    opacity: 0;
-    background: rgba(48,48,48,.6);
-    color: white;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	opacity: 0;
+	background: rgba(48,48,48,.6);
+	color: white;
 	transition: all .3s ease-in-out;
 }
 
 .vertical-centered {
 	position: absolute;
-    top: 42%;
-    left: 35%;
-    text-align: center;
+	top: 42%;
+	left: 35%;
+	text-align: center;
 }
 
 .portfolio-items li:hover .portfolio-detail {
@@ -350,17 +387,18 @@ ul.social li {
 .portfolio-detail p {
 	padding-top: 14px;
 
-    font-family: 'Raleway',sans-serif;
+	font-family: 'Raleway',sans-serif;
 	font-size: 8px;
 	font-weight: 600;
 	line-height: 15px;
-    text-transform: uppercase;
+	color: #fff;
+	text-transform: uppercase;
 }
 
-.portfolio-items li img {
-    width: auto;
-    height: 100%;
-    display: block;
+	.portfolio-items li img {
+	width: auto;
+	height: 100%;
+	display: block;
 }
 
 /* Promod Block */
@@ -386,7 +424,7 @@ ul.social li {
 
 .promo h2 {
 	color: #303030;
-	font-family: PlayfairDisplay;
+	font-family:  'PlayfairDisplay', serif;
 	font-size: 30px;
 	font-style: italic;
 	line-height: 24px;
@@ -395,7 +433,7 @@ ul.social li {
 }
 .promo p {
 	color: #515151;
-	font-family: Raleway;
+	font-family: 'Raleway',sans-serif;
 	font-size: 12px;
 	font-weight: 500;
 	line-height: 24px;
@@ -403,9 +441,9 @@ ul.social li {
 	width: 75%;
 }
 .promo button {
-	background-color:#303030;
+	background-color: #303030;
 	color:white;
-	font-family: Raleway;
+	font-family: 'Raleway',sans-serif;
 	font-size: 12px;
 	font-weight: 500;
 	line-height: 24px;
@@ -420,53 +458,41 @@ ul.social li {
 .ourph {
 	width: 100%;
 }
+
 .ourph h2 {
 	text-align: center;
-	color: #303030;
-	font-family: PlayfairDisplay;
-	font-size: 30px;
-	font-style: italic;
-	line-height: 24px;
 	margin-top: 70px;
 }
-.ourph .dott {
-	margin-top: 25px;
-	margin-bottom: 50px;
-}
-.ourph .text {
+
+.ourph article {
 	float: left;
-	width:50%;
+	width:100%;
 }
+
 .ourph img{
 	float: right;
 	width: 50%;
+	margin-left: 3%;
+	margin-bottom: 10%;
 }
-.ourph p {
-	width: 75%;
+
+.ourph article p {
 	margin-top: 20px;
 	margin-left: 17%;
 	color: #515151;
-	font-family: Raleway;
-	font-size: 12px;
-	font-weight: 500;
 	line-height: 24px;
-	
 }
-.ourph h3 {
-	color: #303030;
-	font-family: PlayfairDisplay;
-	font-size: 30px;
-	font-style: italic;
-	line-height: 24px;
-	margin-left: 17%;
 
+.ourph article h2 {
+	margin-left: 11%;
 }
+
 .ourph button {
 	margin-left: 17%;
-	margin-top: 35px;
+	margin-top: 4%;
 	background-color:#303030;
-	color:white;
-	font-family: Raleway;
+	color: white;
+	font-family: 'Raleway',sans-serif;
 	font-size: 12px;
 	font-weight: 500;
 	line-height: 24px;
@@ -506,8 +532,8 @@ ul.social li {
 
 .centered {
 	position: absolute;
-    top: 50%;
-    left: 50%;
+	top: 50%;
+	left: 50%;
 }
 
 .video p {
@@ -515,7 +541,7 @@ ul.social li {
 	text-align: center;
 	color: white;
 	font-family: 'Playfair Display',serif;
-	font-size: 36px;
+	font-size: 2.25rem;
 	font-style: italic;
 }
 
@@ -546,11 +572,11 @@ ul.social li {
 }
 
 .testimonial img {
-	margin-top: 96px; 
+	margin-top: 64px; 
 }
 
 .testimonial p {
-	width: 745px;
+	max-width: 745px;
 	margin: 0 auto;
 	margin-top: 34px;
 	margin-bottom: 24px;
@@ -607,8 +633,12 @@ ul.social li {
 
 /* Instagram */
 
-.instagram h2 {
+.instagram {
 	margin-top: 80px;
+}
+
+.instagram h2 {
+	text-align: center;
 }
 
 .instagram .dott {
@@ -636,17 +666,15 @@ ul.social li {
 	
 }
 
-.footer img {
+.footer .mike_logo {
 	margin-top: 49px;
 }
 
 .footer p {
-	width: 749px;
+	max-width: 749px;
 	margin: 0 auto;
-	padding-top: 29px;
-	font-size: 12px;
-	font-weight: 500;
-	line-height: 24px;
+	margin-top: 29px;
+	margin-bottom: 26px;
 }
 
 .copyright {
@@ -657,22 +685,46 @@ ul.social li {
 	text-transform: uppercase;
 }
 
-.footer .social a:hover:before{
-	content: '';
-	position: absolute;
-	top: 51%;
-	left: 0;
-	
-	border: 1px solid #e1571a;
-	border-radius:50%;
-	width: 42px;
-	height: 42px;
-}
-
 .footer hr {
 	margin-top: 72px;
 	height: 1px;
 	width: 770px;
 	border: none;
 	background-color: #262626;
+}
+
+@media screen and (max-width: 1000px) {
+	.main-navigation {
+		display: none;
+	}
+
+	.menu-icon {
+		display: block;
+	}
+
+	/*Our Philoshophy*/
+
+	.ourph article h2 {
+		margin-left: 0%;
+	}
+
+	.ourph article p {
+		margin-top: 20px;
+		margin-left: 3%;
+	}
+
+	.ourph button {
+		margin-left: 3%;
+	}
+
+	.ourph img{
+		width: 100%;
+	}
+
+	/* Video */
+
+	.video p {
+		padding-top: 160px;
+		font-size: 1.9rem;
+	}
 }
