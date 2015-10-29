@@ -69,7 +69,7 @@ h2 {
 	font-family: 'Playfair Display', serif;
 	font-size: 1.875em;
 	font-style: italic;
-	line-height: 24px;
+	line-height: 1.5em;
 }
 
 p {
@@ -195,9 +195,7 @@ ul.main-navigation:after{
 
 .wrap {
 	max-width: 1170px;
-	/*width: 100%;*/
 	margin: 0 auto;
-	/*padding-top: 80px;*/
 }
 
 .button {
@@ -427,7 +425,7 @@ ul.social li {
 	font-family:  'PlayfairDisplay', serif;
 	font-size: 30px;
 	font-style: italic;
-	line-height: 24px;
+	line-height: 48px;
 	margin-top: 60px;
 
 }
@@ -440,33 +438,41 @@ ul.social li {
 	margin-top: 27px;
 	width: 75%;
 }
-.promo button {
-	background-color: #303030;
-	color:white;
-	font-family: 'Raleway',sans-serif;
-	font-size: 12px;
-	font-weight: 500;
-	line-height: 24px;
-	text-transform: uppercase;
-	padding: 5px 30px;
-	margin-top: 59px;
-	border: none;
 
+button.btn {
+	padding: 14px 33px;
+	margin-top: 37px;
+	font-family: 'Raleway',sans-serif;
+	font-size: 0.75em; /* 12/16 */
+	font-weight: 500;
+	text-transform: uppercase;
+	border: none;
+	background-color: #303030;
+	color: #fff;
+	cursor: pointer;
 }
+
+button.btn:hover {
+	background-color: #666;
+}
+
+button.btn:focus { outline: none; }
 
 /* Our Philoshophy */
 .ourph {
 	width: 100%;
+	margin-top: 102px;
 }
 
 .ourph h2 {
 	text-align: center;
-	margin-top: 70px;
+	/*margin-top: 70px;*/
 }
 
 .ourph article {
 	float: left;
 	width:100%;
+	margin-top: 18px;
 }
 
 .ourph img{
@@ -487,19 +493,10 @@ ul.social li {
 	margin-left: 11%;
 }
 
-.ourph button {
+.ourph .btn {
 	margin-left: 17%;
-	margin-top: 4%;
-	background-color:#303030;
-	color: white;
-	font-family: 'Raleway',sans-serif;
-	font-size: 12px;
-	font-weight: 500;
-	line-height: 24px;
-	text-transform: uppercase;
-	padding: 5px 30px;
-	border: none;
 }
+
 
 /* Video */
 
@@ -568,6 +565,7 @@ ul.social li {
 
 .testimonial {
 	margin-top: 80px;
+	margin-bottom: 80px;
 	text-align: center;
 }
 
@@ -633,10 +631,6 @@ ul.social li {
 
 /* Instagram */
 
-.instagram {
-	margin-top: 80px;
-}
-
 .instagram h2 {
 	text-align: center;
 }
@@ -663,7 +657,6 @@ ul.social li {
 	background: #141414;
 	color: #515151;
 	text-align: center;
-	
 }
 
 .footer .mike_logo {
@@ -680,6 +673,7 @@ ul.social li {
 .copyright {
 	margin: 33px 0;
 	color: #4c4c4c;
+	font-family: 'Raleway',sans-serif;
 	font-size: 11px;
 	font-weight: 500;
 	text-transform: uppercase;
@@ -688,7 +682,7 @@ ul.social li {
 .footer hr {
 	margin-top: 72px;
 	height: 1px;
-	width: 770px;
+	width: 65.8%;
 	border: none;
 	background-color: #262626;
 }
@@ -704,27 +698,60 @@ ul.social li {
 
 	/*Our Philoshophy*/
 
+	.promo .img {
+		width: 100%;
+		text-align: center;
+	}
+
+	.promo img {
+		float: none;
+	}
+
+	.promo .textarea {
+		text-align: center;
+		width: 95%;
+		float: none;
+	}
+
+	.promo p {
+		width: 95%;
+		text-align: left;
+		margin-left: 3%;
+	}
+
+	.ourph {
+		text-align: center;
+	}
+
 	.ourph article h2 {
 		margin-left: 0%;
 	}
 
 	.ourph article p {
+		width: 97%;
 		margin-top: 20px;
 		margin-left: 3%;
-	}
-
-	.ourph button {
-		margin-left: 3%;
+		text-align: left;
 	}
 
 	.ourph img{
 		width: 100%;
 	}
 
+	.ourph .btn {
+	margin-left: 0;
+}
+
 	/* Video */
 
 	.video p {
 		padding-top: 160px;
 		font-size: 1.9rem;
+	}
+
+	/* Instagram */
+
+	.instagram {
+		display: none;
 	}
 }
