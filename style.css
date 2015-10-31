@@ -186,10 +186,10 @@ ul.main-navigation:after{
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	background: url(img/line_active.png) no-repeat;
 	width: 34px;
 	height: 34px;
 	margin: -17px 0 0 -17px;
+	background: url(img/line_active.png) no-repeat;
 }
 
 .menu-icon {
@@ -293,16 +293,23 @@ ul.main-navigation:after{
 	text-align: center;
 }
 
-.social a:hover:before{
+.social a:before{
 	content: '';
 	position: absolute;
 	top: 0;
 	left: 0;
+	opacity: 0;
 
 	border: 1px solid #e1571a;
 	border-radius:50%;
 	width: 42px;
 	height: 42px;
+
+	transition: all 0.3s ease-in-out;
+}
+
+.social a:hover:before {
+	opacity: 1;
 }
 
 .social a.fb:hover:before{
