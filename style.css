@@ -104,6 +104,21 @@ nav {
 	right: 0;
 }
 
+
+#check {
+	display: none;
+}
+
+.menu-icon {
+	cursor: pointer;
+}
+
+#check:checked + .main-navigation {
+	opacity: 1;
+	visibility: visible;
+	transform: translate(0,0);
+}
+
 .main-navigation {
 	display: inline-block;
 }
@@ -202,6 +217,7 @@ ul.main-navigation:after{
 	display: inline-block;
 	cursor: pointer;
 	background-color: transparent;
+	transition: all .3s ease-in-out;
 }
 
 /*About Me*/
@@ -268,14 +284,13 @@ ul.main-navigation:after{
 	width: 42px;
 	height: 42px;
 	border: 1px solid #868686;
-	border-radius:50%;
+	border-radius: 50%;
 }
 
 .social a {
 	display: block;
 	position: relative;
 	text-align: center;
-
 }
 
 .social a:hover:before{
@@ -283,7 +298,7 @@ ul.main-navigation:after{
 	position: absolute;
 	top: 0;
 	left: 0;
-	
+
 	border: 1px solid #e1571a;
 	border-radius:50%;
 	width: 42px;
@@ -450,6 +465,7 @@ button.btn {
 	background-color: #303030;
 	color: #fff;
 	cursor: pointer;
+	transition: all .3s ease-in-out;
 }
 
 button.btn:hover {
@@ -688,12 +704,43 @@ button.btn:focus { outline: none; }
 }
 
 @media screen and (max-width: 1000px) {
+	.navigation {
+		width: 100%;
+	}
+
 	.main-navigation {
-		display: none;
+		opacity: 0;
+		visibility: hidden;
+		transform: translate(0, -100%);
+		transition: all 0.3s ease;
+	}
+
+	.main-navigation a {
+		display: block;
+		margin-bottom: -1px;
+		padding: 8px 14px;
+		text-decoration: none;
+		line-height: 2rem;
+	}
+
+	ul.main-navigation {
+		width: 100%;
+		position: absolute;
+		top: 0;
+		white-space: nowrap;
+		background: rgba(0, 0, 0, 0.9);
+		z-index: 1;
+	}
+
+	.main-navigation > li {
+		margin-right: 0;
+		float: none;
 	}
 
 	.menu-icon {
 		display: block;
+		position: relative;
+		z-index: 2;
 	}
 
 	/*Our Philoshophy*/
